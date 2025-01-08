@@ -1,0 +1,54 @@
+{
+  "name": "storeware-tanstack-query",
+  "version": "1.0.0",
+  "description": "A custom wrapper for TanStack Query with React 18",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "vite",
+    "test": "jest"
+  },
+  "keywords": [
+    "tanstack-query",
+    "react-query",
+    "react",
+    "query-wrapper",
+    "typescript"
+  ],
+  "author": "Julkar Naen Nahian",
+  "license": "MIT",
+  "dependencies": {
+    "@tanstack/react-query": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@shopify/polaris": "^13.9.2",
+    "@types/jest": "^29.6.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jest": "^29.6.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^6.0.7"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Storeware-Apps/storeware-tanstack-query.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Storeware-Apps/storeware-tanstack-query/issues"
+  },
+  "homepage": "https://github.com/Storeware-Apps/storeware-tanstack-query#readme"
+}

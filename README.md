@@ -23,7 +23,6 @@ interface User {
 
 const UserProfile = () => {
   const { data, isLoading } = useAppQuery<User>({
-    url: "/api/users/1",
     queryKey: ["user", 1],
     queryFn: async () => {
       const response = await fetch("/api/users/1");
