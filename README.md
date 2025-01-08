@@ -15,6 +15,22 @@ npm i git+https://github.com/Storeware-Apps/storeware-tanstack-query.git
 
 ## Usage
 
+To use the TanStack Query hooks, first wrap your application with the `QueryProvider`:
+
+```tsx
+import { QueryProvider } from "storeware-tanstack-query";
+
+function App() {
+  return (
+    <QueryProvider>
+      {/* Your app components */}
+    </QueryProvider>
+  );
+}
+```
+
+The `QueryProvider` initializes the TanStack Query client with default configurations optimized for Storeware applications. It also handles authentication and error management automatically.
+
 ### useAppQuery Example
 
 ```tsx
