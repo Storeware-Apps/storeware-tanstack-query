@@ -7,6 +7,9 @@ A custom TanStack Query wrapper for Storeware applications with built-in authent
 Install the package from your Git repository using:
 
 ```bash
+npm i git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+
+# or
 npm i git+https://github.com/Storeware-Apps/storeware-tanstack-query.git
 ```
 
