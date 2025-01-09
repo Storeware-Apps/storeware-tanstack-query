@@ -1,14 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const client_1 = require("react-dom/client");
-const App_1 = __importDefault(require("./components/App"));
-const QueryProvider_1 = require("./QueryProvider");
-const container = document.getElementById("root");
-const root = (0, client_1.createRoot)(container); // Ensure the root element exists
-root.render(react_1.default.createElement(react_1.default.StrictMode, null,
-    react_1.default.createElement(QueryProvider_1.QueryProvider, null,
-        react_1.default.createElement(App_1.default, null))));
+exports.useFetch = exports.useAppQuery = exports.useAppMutation = exports.QueryProvider = void 0;
+var QueryProvider_1 = require("./QueryProvider");
+Object.defineProperty(exports, "QueryProvider", { enumerable: true, get: function () { return QueryProvider_1.QueryProvider; } });
+var useAppMutation_1 = require("./useAppMutation");
+Object.defineProperty(exports, "useAppMutation", { enumerable: true, get: function () { return useAppMutation_1.useAppMutation; } });
+var useAppQuery_1 = require("./useAppQuery");
+Object.defineProperty(exports, "useAppQuery", { enumerable: true, get: function () { return useAppQuery_1.useAppQuery; } });
+var useFetch_1 = require("./useFetch");
+Object.defineProperty(exports, "useFetch", { enumerable: true, get: function () { return useFetch_1.useFetch; } });
