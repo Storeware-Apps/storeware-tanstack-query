@@ -1,0 +1,25 @@
+{
+  "name": "storeware-tanstack-query-example",
+  "version": "1.0.0",
+  "description": "A example for TanStack Query with React 18",
+  "main": "index.tsx",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "Julkar Naen Nahian",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/polaris": "^13.9.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "storeware-tanstack-query": "git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.2.2",
+    "vite": "^6.0.7"
+  }
+}
