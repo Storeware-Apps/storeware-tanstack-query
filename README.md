@@ -8,9 +8,20 @@ Install the package from your Git repository using:
 
 ```bash
 npm i git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+```
 
-# or
+or
+
+```bash
 npm i git+https://github.com/Storeware-Apps/storeware-tanstack-query.git
+```
+
+## Upgrade
+
+Upgrade the pacakge form Git repository using:
+
+```bash
+npm update storeware-tanstack-query
 ```
 
 ## Usage
