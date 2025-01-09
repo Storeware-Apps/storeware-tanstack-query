@@ -1,4 +1,3 @@
-// src/useMutation.ts
 import {
   MutationKey,
   useMutation,
@@ -11,17 +10,19 @@ type MutationFunction<T> = (data: T) => Promise<any>;
 export interface UseAppMutationOptions<T = unknown> {
   mutationKey?: MutationKey;
   mutationFn?: MutationFunction<T>;
+  onMutate?: (variables: T) => void | Promise<void>;
   onSuccess?: (data: any, variables: T) => void;
   onError?: (error: Error, variables: T) => void;
   options?: Omit<
     UseMutationOptions<any, Error, T, unknown>,
-    "onSuccess" | "onError"
+    "onSuccess" | "onError" | "onMutate"
   >;
 }
 
 export const useAppMutation = <T = unknown>({
   mutationKey,
   mutationFn,
+  onMutate,
   onSuccess,
   onError,
   options,
@@ -30,6 +31,7 @@ export const useAppMutation = <T = unknown>({
     ...options,
     mutationKey,
     mutationFn,
+    onMutate,
     onSuccess,
     onError,
   });
