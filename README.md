@@ -13,7 +13,7 @@ npm i git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
 or
 
 ```bash
-npm i git+https://github.com/Storeware-Apps/storeware-tanstack-query.git
+yarn add git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
 ```
 
 ## Upgrade
@@ -22,6 +22,11 @@ Upgrade the pacakge form Git repository using:
 
 ```bash
 npm update storeware-tanstack-query
+```
+
+or 
+```bash
+yarn upgrade storeware-tanstack-query
 ```
 
 ## Usage
