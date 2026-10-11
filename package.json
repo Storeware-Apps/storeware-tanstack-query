@@ -1,7 +1,7 @@
 {
   "name": "storeware-tanstack-query",
   "version": "1.0.2",
-  "description": "A custom wrapper for TanStack Query with React 18",
+  "description": "A custom wrapper for TanStack Query with React 18 and 19",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -18,20 +18,20 @@
   "author": "Julkar Naen Nahian",
   "license": "MIT",
   "dependencies": {
-    "@tanstack/react-query": "^5.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@tanstack/react-query": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "files": [
     "dist",
