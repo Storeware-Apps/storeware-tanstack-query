@@ -13,7 +13,7 @@
     "@tanstack/react-query": "^5.104.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "storeware-tanstack-query": "git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git"
+    "storeware-tanstack-query": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
