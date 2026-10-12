@@ -11,21 +11,21 @@ These are peer dependencies, so your app must install them. The package uses you
 
 ## Installation
 
-Install the package from your Git repository, along with its peer dependencies, using:
+Install the package from npm, along with its peer dependencies, using:
 
 ```bash
-npm i @tanstack/react-query git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+npm i storeware-tanstack-query @tanstack/react-query
 ```
 
 or
 
 ```bash
-yarn add @tanstack/react-query git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+yarn add storeware-tanstack-query @tanstack/react-query
 ```
 
 ## Upgrade
 
-Upgrade the package from Git repository using:
+Upgrade the package using:
 
 ```bash
 npm update storeware-tanstack-query
