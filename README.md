@@ -1,24 +1,31 @@
 # Storeware TanStack Query
 
-A custom TanStack Query wrapper for Storeware applications with built-in authentication and fetch utilities.
+A custom TanStack Query wrapper for Storeware applications with a shared query client and fetch utilities.
+
+## Requirements
+
+- React 18 or 19
+- TanStack Query v5 (`@tanstack/react-query`)
+
+These are peer dependencies, so your app must install them. The package uses your app's copies and does not bundle its own.
 
 ## Installation
 
-Install the package from your Git repository using:
+Install the package from your Git repository, along with its peer dependencies, using:
 
 ```bash
-npm i git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+npm i @tanstack/react-query git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
 ```
 
 or
 
 ```bash
-yarn add git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
+yarn add @tanstack/react-query git+ssh://git@github.com:Storeware-Apps/storeware-tanstack-query.git
 ```
 
 ## Upgrade
 
-Upgrade the pacakge form Git repository using:
+Upgrade the package from Git repository using:
 
 ```bash
 npm update storeware-tanstack-query
@@ -45,7 +52,9 @@ function App() {
 }
 ```
 
-The `QueryProvider` initializes the TanStack Query client with default configurations optimized for Storeware applications. It also handles authentication and error management automatically.
+The `QueryProvider` creates a single shared TanStack Query client and provides it to your app.
+
+`useAppQuery` uses these defaults, which you can override through `reactQueryOptions`: `staleTime` of 5 minutes, `refetchOnWindowFocus: false`, and `refetchInterval: false`.
 
 ### useAppQuery Example
 
@@ -91,7 +100,7 @@ interface UpdateUserInput {
 }
 
 const UserUpdateForm = () => {
-  const { mutate, isLoading } = useAppMutation<UpdateUserInput>({
+  const { mutate, isPending } = useAppMutation<UpdateUserInput>({
     mutationKey: ["updateUser"],
     mutationFn: async (data) => {
       const response = await fetch(`/api/users/${data.id}`, {
@@ -119,8 +128,8 @@ const UserUpdateForm = () => {
   return (
     <form onSubmit={() => handleSubmit({ id: 1, name: "John Doe" })}>
       {/* Form fields */}
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? "Updating..." : "Update User"}
+      <button type="submit" disabled={isPending}>
+        {isPending ? "Updating..." : "Update User"}
       </button>
     </form>
   );
@@ -141,6 +150,7 @@ const UserUpdateForm = () => {
 
 - `mutationKey`: React Query mutation key
 - `mutationFn`: Custom mutation function
+- `onMutate`: Callback function to run before the mutation function
 - `onSuccess`: Callback function to perform action on success
 - `onError`: Callback function to perform action on error
 - `options`: Additional React Query mutation options
