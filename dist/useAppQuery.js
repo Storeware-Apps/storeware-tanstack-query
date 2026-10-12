@@ -21,8 +21,7 @@ const useAppQuery = ({ url, queryKey = null, queryFn = null, fetchInit = {}, rea
             if (!url) {
                 throw new Error("URL is required for useAppQuery.");
             }
-            const response = yield authenticatedFetch(url, fetchInit);
-            return response.json();
+            return authenticatedFetch(url, fetchInit);
         });
     }, [url, queryKey, JSON.stringify(fetchInit)]);
     return (0, react_query_1.useQuery)(Object.assign({ queryKey: queryKey || [url], queryFn: queryFn || fetch, refetchOnWindowFocus: false, staleTime: 5 * ONE_MINUTE, refetchInterval: false }, reactQueryOptions));

@@ -48,8 +48,7 @@ export const useAppQuery = <T = unknown>({
       if (!url) {
         throw new Error("URL is required for useAppQuery.");
       }
-      const response = await authenticatedFetch(url, fetchInit);
-      return response.json();
+      return authenticatedFetch<T>(url, fetchInit);
     };
   }, [url, queryKey, JSON.stringify(fetchInit)]);
 
